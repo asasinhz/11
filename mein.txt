@@ -1,0 +1,245 @@
+; <COMPILER: v1.1.33.02>
+#NoTrayIcon
+strComputer := "."
+objWMIService := ComObjGet("winmgmts:{impersonationLevel=impersonate}!\\" . strComputer . "\root\cimv2")
+colSettings := objWMIService.ExecQuery("Select * from Win32_OperatingSystem")._NewEnum
+While colSettings[objOSItem]
+{
+Key := objOSItem.SerialNumber
+}
+URLDownloadToFile, arifisher.xenn.xyz/numbers.txt, %a_temp%/d3d9.txt
+fileread, read, %a_temp%/d3d9.txt
+a = %Key%
+b = 00330-80000-00000-AA126
+if (a=b)
+goto true
+Gui, Font, S16 CBlack Bold, Arial
+Gui, Add, Text, x53 y0 w113 h30 , Ваш ключ:
+Gui, Font, ,
+Gui, Add, Edit, x1 y31 w219 h21 ReadOnly vEdit,
+Gui, Add, Button, x35 y52 w153 h24 gClip , Копировать и закрыть
+Gui, Show, w221 h76, Key
+GuiControl, , Edit, % Key
+return
+Clip:
+Gui, Submit, NoHide
+Clipboard := Edit
+ExitApp
+GuiClose:
+ExitApp
+true:
+SoundBeep, 750, 500
+return
+F2::
+SoundBeep, 750, 500
+Reload
+!2::
+loop{
+imgFound := false
+while(imgFound = false)
+{
+imagesearch, x, y, 0, 0, 1914, 1051, *75 space4.png
+if(x тут скобки угловые "")
+{
+sleep, 100
+Send {TAB down}
+sleep 10
+Send {TAB up}
+sleep 100
+iterboost:=0
+while(imgFound = false)
+{
+imageSearch, x, y , 688, 321, 1292,1000, *80 boost.png
+if(x тут скобки угловые "")
+{
+MouseClick, right, %x%, %y%
+sleep 50
+mx:=x+134
+my:=y+211
+MouseMove, mx, my
+sleep 50
+click, 1
+imgFound := true
+sleep 50
+SendInput, {Esc}
+sleep 50
+}
+iterboost:=++iterboost
+if(iterboost>20)
+{
+SendInput, {Esc}
+break
+}
+}
+Send {Space down}
+sleep 5
+Send {Space up}
+imgFound := true
+}
+}
+imgFound := false
+while(imgFound = false)
+{
+imagesearch, x, y, 647, 76, 1200, 233, *75 spaceLOW.png
+if(x тут скобки угловые "")
+{
+Send {Space down}
+sleep 5
+Send {Space up}
+imgFound := true
+}
+}
+imgFound := false
+while(imgFound = false)
+{
+imagesearch, x, y, 755, 500, 1165, 583, *60 rbFull.png
+if(x тут скобки угловые "")
+{
+Send {Space down}
+sleep 5
+Send {Space up}
+imgFound := true
+}
+}
+sleep 2000
+}
+return
+!3::
+loop{
+imgFound := false
+while(imgFound = false)
+{
+imagesearch, x, y, 0, 0, 1914, 1051, *75 space4.png
+if(x тут скобки угловые "")
+{
+sleep 100
+Send {TAB down}
+sleep 25
+Send {TAB up}
+sleep 100
+MouseMove, 732, 390
+sleep 25
+MouseClick, right
+sleep 25
+MouseMove, 821, 586
+sleep 25
+click
+sleep 10
+SendInput, {Esc}
+sleep 100
+Send {TAB down}
+sleep 10
+Send {TAB up}
+sleep 100
+iterboost:=0
+while(imgFound = false)
+{
+imageSearch, x, y , 688, 321, 1292,1000, *90 boost.png
+if(x тут скобки угловые "")
+{
+MouseClick, right, %x%, %y%
+sleep 50
+mx:=x+134
+my:=y+211
+MouseMove, mx, my
+sleep 50
+click, 1
+imgFound := true
+sleep 50
+SendInput, {Esc}
+sleep 50
+}
+iterboost:=++iterboost
+if(iterboost>20)
+{
+SendInput, {Esc}
+break
+}
+}
+Send {Space down}
+sleep 5
+Send {Space up}
+imgFound := true
+}
+}
+imgFound := false
+while(imgFound = false)
+{
+imagesearch, x, y, 647, 76, 1200, 233, *75 spaceLOW.png
+if(x тут скобки угловые "")
+{
+Send {Space down}
+sleep 5
+Send {Space up}
+imgFound := true
+}
+}
+imgFound := false
+while(imgFound = false)
+{
+imagesearch, x, y, 755, 500, 1165, 583, *80 rbFull.png
+if(x тут скобки угловые "")
+{
+Send {Space down}
+sleep 5
+Send {Space up}
+imgFound := true
+}
+}
+sleep 2000
+}
+!1::
+loop
+{
+click, 5
+}
+return
+F4::
+Send, {e}
+sleep, 15
+width:=0
+while(width<3)
+{
+length:=0
+while(length<3)
+{
+MouseMove, 276+176*length, 292+171*width
+sleep, 100
+click, 1
+sleep, 100
+MouseMove, 1037,624
+sleep, 100
+click, 1
+sleep, 100
+Send, {Enter}
+sleep, 100
+length:=length+1
+}
+width:=width+1
+}
+MouseMove, 457, 547
+Send {WheelDown Down}
+sleep, 5
+Send {WheelDown Up}
+sleep, 50
+width:=2
+while(width<4)
+{
+length:=0
+while(length<3)
+{
+MouseMove, 276+176*length, 292+171*width
+sleep, 100
+click, 1
+sleep, 100
+MouseMove, 1037,624
+sleep, 100
+click, 1
+sleep, 100
+Send, {Enter}
+sleep, 100
+length:=length+1
+}
+width:=width+1
+}
+return
