@@ -1,0 +1,49 @@
+F4::
+Send, {e}
+sleep, 15
+width:=0
+while(width<3)
+{
+length:=0
+while(length<3)
+{
+MouseMove, 276+176*length, 292+171*width
+sleep, 100
+click, 1
+sleep, 100
+MouseMove, 1037,624
+sleep, 100
+click, 1
+sleep, 100
+Send, {Enter}
+sleep, 100
+length:=length+1
+}
+width:=width+1
+}
+MouseMove, 457, 547
+Send {WheelDown Down}
+sleep, 5
+Send {WheelDown Up}
+sleep, 50
+width:=2
+while(width<4)
+{
+length:=0
+while(length<3)
+{
+MouseMove, 276+176*length, 292+171*width
+sleep, 100
+click, 1
+sleep, 100
+MouseMove, 1037,624
+sleep, 100
+click, 1
+sleep, 100
+Send, {Enter}
+sleep, 100
+length:=length+1
+}
+width:=width+1
+}
+return
